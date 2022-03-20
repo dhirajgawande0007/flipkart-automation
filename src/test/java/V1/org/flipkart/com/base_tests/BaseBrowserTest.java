@@ -10,22 +10,21 @@ public class BaseBrowserTest {
 
 	public WebDriver driver;
 	String loginUrl;
-	
+
 	public BaseBrowserTest() {
-		loginUrl= "https://" + System.getProperty("login.url");
+		loginUrl = "https://" + System.getProperty("login.url");
 	}
-	
+
 	@BeforeMethod
 	public void driverSetup() {
 		WebDriverBuilder wdb = new WebDriverBuilder();
 		driver = wdb.getDriver();
 		Navigator nav = new Navigator(driver);
-        nav.navigateTo(loginUrl);
+		nav.navigateTo(loginUrl);
 	}
-	
-//	@AfterMethod
-//	public void driverCleanp(){
-//		driver.quit();
-//	}
-	
+
+	@AfterMethod
+	public void driverCleanp() {
+		driver.quit();
+	}
 }

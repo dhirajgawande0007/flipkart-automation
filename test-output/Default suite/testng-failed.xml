@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="V1.org.flipkart.com.smoke_and_sanity_tests.validateFlipkartHomepageUI">
+      <class name="V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage">
         <methods>
           <include name="driverSetup"/>
-          <include name="validateHomepageUI"/>
+          <include name="validateLoginPageUI"/>
           <include name="driverCleanp"/>
         </methods>
-      </class> <!-- V1.org.flipkart.com.smoke_and_sanity_tests.validateFlipkartHomepageUI -->
+      </class> <!-- V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

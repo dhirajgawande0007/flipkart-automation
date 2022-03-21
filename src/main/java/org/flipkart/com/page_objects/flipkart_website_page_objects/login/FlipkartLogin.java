@@ -18,6 +18,7 @@ public class FlipkartLogin extends BasePage {
 	private final By GET_ACCESS_LABEL = By.cssSelector("p[class='_1-pxlW'] span");
 	private final By FORGOT_LINK = By.xpath("//span[contains(text(),'Forgot?')]");
 	private final By TERMS_OF_USE_LINK = By.xpath("//div[@class='_1Ijv5h']//a[contains(@href,'terms')]");
+	private final By PRIVACY_POLICY_LINK = By.xpath("//div[@class='_1Ijv5h']//a[contains(@href,'privacypolicy')]");
 
 	public FlipkartLogin(WebDriver driver) {
 		super(driver);
@@ -45,5 +46,13 @@ public class FlipkartLogin extends BasePage {
 
 	public boolean getTermsOfUseLinkStatus() throws MalformedURLException, IOException {
 		return getLinkStatus(TERMS_OF_USE_LINK);
+	}
+
+	public boolean getPrivacyPolicyLinkStatus() throws MalformedURLException, IOException {
+		return getLinkStatus(PRIVACY_POLICY_LINK);
+	}
+
+	public boolean verifyLoginLabelNotPresent() {
+		return confirmElementIsNotPresent(LOGIN_LABEL);
 	}
 }

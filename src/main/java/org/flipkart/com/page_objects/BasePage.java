@@ -77,4 +77,19 @@ public class BasePage {
 			return false;
 		}
 	}
+
+	public boolean confirmElementIsNotPresent(By locator) {
+		try {
+			boolean isLocatorDisappeared = new WebDriverWait(driver, waitTimes.DEFAULT_WAIT)
+					.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+			if (isLocatorDisappeared) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

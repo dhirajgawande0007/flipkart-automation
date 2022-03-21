@@ -6,7 +6,7 @@
       <class name="V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage">
         <methods>
           <include name="driverSetup"/>
-          <include name="validateLoginPageUI"/>
+          <include name="validateLoginFunctionality"/>
           <include name="driverCleanp"/>
         </methods>
       </class> <!-- V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage -->

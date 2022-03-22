@@ -19,7 +19,9 @@ public class FlipkartLogin extends BasePage {
 	private final By FORGOT_LINK = By.xpath("//span[contains(text(),'Forgot?')]");
 	private final By TERMS_OF_USE_LINK = By.xpath("//div[@class='_1Ijv5h']//a[contains(@href,'terms')]");
 	private final By PRIVACY_POLICY_LINK = By.xpath("//div[@class='_1Ijv5h']//a[contains(@href,'privacypolicy')]");
-
+	private final By REQUEST_OTP_BUTTON = By.xpath("//button[contains(text(),'Request OTP')]");
+	private final By CREATE_AN_ACCOUNT_LINK = By.xpath("a[class='_14Me7y']");
+	
 	public FlipkartLogin(WebDriver driver) {
 		super(driver);
 	}
@@ -54,5 +56,13 @@ public class FlipkartLogin extends BasePage {
 
 	public boolean verifyLoginLabelNotPresent() {
 		return confirmElementIsNotPresent(LOGIN_LABEL);
+	}
+	
+	public boolean verifyRequestOtpButtonIsPresent() {
+		return confirmElementIsVisible(REQUEST_OTP_BUTTON);
+	}
+	
+	public String getCreateAnAccountLinkText() {
+		return getElementText(CREATE_AN_ACCOUNT_LINK);
 	}
 }

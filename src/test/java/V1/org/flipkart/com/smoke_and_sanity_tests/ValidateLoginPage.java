@@ -37,4 +37,14 @@ public class ValidateLoginPage extends BaseBrowserTest {
 		Assert.assertTrue(objFlipkartLogin.verifyRequestOtpButtonIsPresent(), "Unable to locate Request Otp Button");
 		Assert.assertEquals(objFlipkartLogin.getCreateAnAccountLinkText(), "New to Flipkart? Create an account");
 	}
+
+	@Test
+	public void validateValidationMessages(){
+		FlipkartLogin objFlipkartLogin = new FlipkartLogin(driver);
+		Assert.assertTrue(objFlipkartLogin.clickOnLoginButton(), "Unable to click on Login button");
+		Assert.assertEquals(objFlipkartLogin.getEmailIdValidationMessage(), "Please enter valid Email ID/Mobile number");
+		Assert.assertTrue(objFlipkartLogin.fillEmailTextbox(), "Unable to enter email");
+		Assert.assertTrue(objFlipkartLogin.clickOnLoginButton(), "Unable to click on Login button");
+		Assert.assertEquals(objFlipkartLogin.getEnterPasswordValidationMessage(),"Please enter Password");
+	}
 }

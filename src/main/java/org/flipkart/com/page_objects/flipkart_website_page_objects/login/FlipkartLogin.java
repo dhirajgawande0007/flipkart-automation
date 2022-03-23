@@ -11,7 +11,7 @@ public class FlipkartLogin extends BasePage {
 
 	private final String EMAILID_INPUT = "testuser@testmail.lcl";
 	private final String PASSWORD_INPUT = "Password@123";
-	private final By EMAIL_ID_TEXTFIELD = By.cssSelector("input[class*='_2IX_2- VJZDxU']");
+	private final By EMAIL_ID_TEXTFIELD = By.xpath("//span[contains(text(),'Enter Email')]/parent::label/preceding-sibling::input");
 	private final By PASSWORD_TEXTFIELD = By.cssSelector("input[type='password']");
 	private final By LOGIN_BUTTON = By.cssSelector("div[class=\"_1D1L_j\"] button[type='submit']");
 	private final By LOGIN_LABEL = By.cssSelector("span[class='_36KMOx'] span");
@@ -21,6 +21,9 @@ public class FlipkartLogin extends BasePage {
 	private final By PRIVACY_POLICY_LINK = By.xpath("//div[@class='_1Ijv5h']//a[contains(@href,'privacypolicy')]");
 	private final By REQUEST_OTP_BUTTON = By.xpath("//button[contains(text(),'Request OTP')]");
 	private final By CREATE_AN_ACCOUNT_LINK = By.xpath("a[class='_14Me7y']");
+	private final By ENTER_EMAIL_ID_VALIDATION_MESSAGE = By.xpath("//span[@class='_2YULOR']");
+	private final By ENTER_PASSWORD_VALIDATION_MESSAGE = By.xpath("//input[@type='password']/parent::div/span[@class='_2YULOR']");
+
 	
 	public FlipkartLogin(WebDriver driver) {
 		super(driver);
@@ -64,5 +67,13 @@ public class FlipkartLogin extends BasePage {
 	
 	public String getCreateAnAccountLinkText() {
 		return getElementText(CREATE_AN_ACCOUNT_LINK);
+	}
+
+	public String getEmailIdValidationMessage(){
+		return getElementText(ENTER_EMAIL_ID_VALIDATION_MESSAGE);
+	}
+
+	public String getEnterPasswordValidationMessage(){
+		return getElementText(ENTER_PASSWORD_VALIDATION_MESSAGE);
 	}
 }

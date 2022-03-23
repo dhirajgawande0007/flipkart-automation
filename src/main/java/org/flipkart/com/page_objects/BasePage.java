@@ -92,4 +92,14 @@ public class BasePage {
 			return false;
 		}
 	}
+	
+	public boolean confirmElementIsVisible(By locator) {
+		try {
+			 new WebDriverWait(driver, waitTimes.DEFAULT_WAIT)
+					.until(ExpectedConditions.visibilityOfElementLocated(locator));
+			 return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
 }

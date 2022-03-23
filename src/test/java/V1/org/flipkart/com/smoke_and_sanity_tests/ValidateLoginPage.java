@@ -24,7 +24,7 @@ public class ValidateLoginPage extends BaseBrowserTest {
 		/* Below method is used to verify that the login label is invisible. So that the script knows 
 		 the login popup is closed. */
 		Assert.assertTrue(objFlipkartLogin.verifyLoginLabelNotPresent(), "Login label is present");
-	}
+}
 
 	@Test
 	public void validateLoginPageUI() throws MalformedURLException, IOException {
@@ -34,5 +34,7 @@ public class ValidateLoginPage extends BaseBrowserTest {
 				"Get access to your Orders, Wishlist and Recommendations");
 		Assert.assertTrue(objFlipkartLogin.getTermsOfUseLinkStatus(), "Terms of Use link is broken");
 		Assert.assertTrue(objFlipkartLogin.getPrivacyPolicyLinkStatus(), "Privacy Policy link is broken");
+		Assert.assertTrue(objFlipkartLogin.verifyRequestOtpButtonIsPresent(), "Unable to locate Request Otp Button");
+		Assert.assertEquals(objFlipkartLogin.getCreateAnAccountLinkText(), "New to Flipkart? Create an account");
 	}
 }

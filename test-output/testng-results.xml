@@ -1,21 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46516" started-at="2022-03-21T20:06:40 IST" finished-at="2022-03-21T20:07:26 IST">
+  <suite name="Default suite" duration-ms="45083" started-at="2022-03-22T15:22:25 IST" finished-at="2022-03-22T15:23:10 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46516" started-at="2022-03-21T20:06:40 IST" finished-at="2022-03-21T20:07:26 IST">
+    <test name="Default test" duration-ms="45083" started-at="2022-03-22T15:22:25 IST" finished-at="2022-03-22T15:23:10 IST">
       <class name="V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage">
-        <test-method status="PASS" signature="driverSetup()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="driverSetup" is-config="true" duration-ms="38680" started-at="2022-03-21T20:06:40 IST" finished-at="2022-03-21T20:07:18 IST">
+        <test-method status="PASS" signature="driverSetup()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="driverSetup" is-config="true" duration-ms="15663" started-at="2022-03-22T15:22:25 IST" finished-at="2022-03-22T15:22:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverSetup -->
-        <test-method status="PASS" signature="validateLoginFunctionality()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="validateLoginFunctionality" duration-ms="7160" started-at="2022-03-21T20:07:18 IST" finished-at="2022-03-21T20:07:25 IST">
+        <test-method status="PASS" signature="validateLoginFunctionality()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="validateLoginFunctionality" duration-ms="4991" started-at="2022-03-22T15:22:41 IST" finished-at="2022-03-22T15:22:46 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginFunctionality -->
-        <test-method status="PASS" signature="driverCleanp()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="driverCleanp" is-config="true" duration-ms="646" started-at="2022-03-21T20:07:25 IST" finished-at="2022-03-21T20:07:26 IST">
+        <test-method status="PASS" signature="driverCleanp()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="driverCleanp" is-config="true" duration-ms="633" started-at="2022-03-22T15:22:46 IST" finished-at="2022-03-22T15:22:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverCleanp -->
+        <test-method status="PASS" signature="driverSetup()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="driverSetup" is-config="true" duration-ms="11481" started-at="2022-03-22T15:22:46 IST" finished-at="2022-03-22T15:22:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverSetup -->
+        <test-method status="FAIL" signature="validateLoginPageUI()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="validateLoginPageUI" duration-ms="11626" started-at="2022-03-22T15:22:58 IST" finished-at="2022-03-22T15:23:09 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [New to Flipkart? Create an account] but found [Failed to get Text from Element.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [New to Flipkart? Create an account] but found [Failed to get Text from Element.]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage.validateLoginPageUI(ValidateLoginPage.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginPageUI -->
+        <test-method status="PASS" signature="driverCleanp()[pri:0, instance:V1.org.flipkart.com.smoke_and_sanity_tests.ValidateLoginPage@eb21112]" name="driverCleanp" is-config="true" duration-ms="656" started-at="2022-03-22T15:23:09 IST" finished-at="2022-03-22T15:23:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverCleanp -->

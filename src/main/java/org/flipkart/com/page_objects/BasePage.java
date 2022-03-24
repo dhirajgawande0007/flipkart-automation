@@ -7,8 +7,10 @@ import java.net.ProtocolException;
 import java.net.URL;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -102,4 +104,34 @@ public class BasePage {
 			return false;
 		}
 	}
+
+	public boolean hoverOnElement(By locator){
+	try{
+		WebElement element = new WebDriverWait(driver, waitTimes.DEFAULT_WAIT)
+				.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		Actions a= new Actions(driver);
+		a.moveToElement(element).build().perform();
+		return true;
+	}catch(Exception e){
+	e.printStackTrace();
+	return false;
+		}
+	}
+
+	public boolean scrollToElement(By locator){
+		try{
+			WebElement element = new WebDriverWait(driver,waitTimes.DEFAULT_WAIT)
+					.until(ExpectedConditions.visibilityOfElementLocated(locator));
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+
+			for(int i=0;i<=driver.manage().window().getSize().getHeight();i++) {
+				js.executeScript("window.scrollBy(0,"+i+")","");
+			}
+			return true;
+		}catch(Exception e){
+			e.printStackTrace();
+			return false;
+		}
+	}
+
 }

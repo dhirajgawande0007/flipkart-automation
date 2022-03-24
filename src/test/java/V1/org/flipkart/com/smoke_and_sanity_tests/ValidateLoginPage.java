@@ -27,7 +27,7 @@ public class ValidateLoginPage extends BaseBrowserTest {
 }
 
 	@Test
-	public void validateLoginPageUI() throws MalformedURLException, IOException {
+	public void validateLoginPopupUI() throws MalformedURLException, IOException {
 		FlipkartLogin objFlipkartLogin = new FlipkartLogin(driver);
 		Assert.assertEquals(objFlipkartLogin.getLoginLabel(), "Login");
 		Assert.assertEquals(objFlipkartLogin.getAccessLabel(),

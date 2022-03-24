@@ -20,10 +20,10 @@ public class FlipkartLogin extends BasePage {
 	private final By TERMS_OF_USE_LINK = By.xpath("//div[@class='_1Ijv5h']//a[contains(@href,'terms')]");
 	private final By PRIVACY_POLICY_LINK = By.xpath("//div[@class='_1Ijv5h']//a[contains(@href,'privacypolicy')]");
 	private final By REQUEST_OTP_BUTTON = By.xpath("//button[contains(text(),'Request OTP')]");
-	private final By CREATE_AN_ACCOUNT_LINK = By.xpath("a[class='_14Me7y']");
+	private final By CREATE_AN_ACCOUNT_LINK = By.cssSelector("a[class='_14Me7y']");
 	private final By ENTER_EMAIL_ID_VALIDATION_MESSAGE = By.xpath("//span[@class='_2YULOR']");
 	private final By ENTER_PASSWORD_VALIDATION_MESSAGE = By.xpath("//input[@type='password']/parent::div/span[@class='_2YULOR']");
-
+	private final By CLOSE_ICON = By.cssSelector("button._2doB4z");
 	
 	public FlipkartLogin(WebDriver driver) {
 		super(driver);
@@ -75,5 +75,9 @@ public class FlipkartLogin extends BasePage {
 
 	public String getEnterPasswordValidationMessage(){
 		return getElementText(ENTER_PASSWORD_VALIDATION_MESSAGE);
+	}
+
+	public boolean clickOnCloseIcon(){
+		return clickElement(CLOSE_ICON);
 	}
 }

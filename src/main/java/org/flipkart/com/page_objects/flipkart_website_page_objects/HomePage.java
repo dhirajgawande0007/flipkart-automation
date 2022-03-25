@@ -13,18 +13,17 @@ public class HomePage extends BasePage{
 	private final By CART_NAVIGATION_HEADER = By.xpath("//span[text()='Cart']");
 	private final By FASHION_SUBHEADER_MENU = By.cssSelector("img[alt='Fashion']");
 	private final By CONTACT_US_FOOTER_LINK = By.xpath("//a[@class='_1arVWX'][contains(text(),'Contact Us')]");
+	private final By FASHION_MENU_OPTIONS = By.xpath("div._2IjXr8 a");
 
 	public HomePage(WebDriver driver) {
 		super(driver);
 	}
 
 	public boolean hoverOnFashinSubHeaderMenu(){
+		System.out.println("hi");
 		return hoverOnElement(FASHION_SUBHEADER_MENU);
+
 	}
 
-	public boolean scrollToContactUs(){
-		//return scrollToElement(CONTACT_US_FOOTER_LINK);
-		return clickElement(CONTACT_US_FOOTER_LINK);
-	}
 
 }

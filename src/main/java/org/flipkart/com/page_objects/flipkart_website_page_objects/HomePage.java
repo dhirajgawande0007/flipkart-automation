@@ -20,7 +20,7 @@ public class HomePage extends BasePage{
 	}
 
 	public boolean hoverOnFashinSubHeaderMenu(){
-		System.out.println("hi");
+
 		return hoverOnElement(FASHION_SUBHEADER_MENU);
 
 	}
